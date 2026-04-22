@@ -1,0 +1,16 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Generated conversion files
+media/inputs/*
+media/outputs/*
+!media/inputs/.gitkeep
+!media/outputs/.gitkeep
