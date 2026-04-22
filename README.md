@@ -43,21 +43,37 @@ ffmpeg -version
 uv sync
 ```
 
-2. Apply migrations:
+2. Create your environment file:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+3. Apply migrations:
 
 ```powershell
 uv run python manage.py migrate
 ```
 
-3. Start the server:
+4. Start the server:
 
 ```powershell
 uv run python manage.py runserver
 ```
 
-4. Open the app:
+5. Open the app:
 
 http://127.0.0.1:8000/
+
+## Environment Variables
+
+- `DEBUG`: `True` or `False`
+- `SECRET_KEY`: Django secret key
+- `ALLOWED_HOSTS`: comma-separated hosts, e.g. `127.0.0.1,localhost`
+- `CSRF_TRUSTED_ORIGINS`: comma-separated origins with scheme
+- `LANGUAGE_CODE`: e.g. `en-us`
+- `TIME_ZONE`: e.g. `UTC`
+- `FFMPEG_BINARY`: optional absolute path to ffmpeg executable
 
 ## How Conversion Works
 

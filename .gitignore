@@ -9,6 +9,11 @@ wheels/
 # Virtual environments
 .venv
 
+# Environment files
+.env
+.env.*
+!.env.example
+
 # Generated conversion files
 media/inputs/*
 media/outputs/*
